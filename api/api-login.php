@@ -7,13 +7,13 @@ try{
     $query->bindValue(':userEmail', $_POST['email']);
     $query->execute();
     $row = $query->fetch();
-    if(password_verify($_POST['password'], $row[5])){
+    if(password_verify($_POST['password'], $row->userPassword)){
         session_start();
-        $_SESSION['iUserId'] = $row[0];
-        $_SESSION['sName'] = $row[1];
-        $_SESSION['sLastName'] = $row[2];
-        $_SESSION['sUserName'] = $row[3];
-        $_SESSION['sProfilePictureUrl'] = $row[10];
+        $_SESSION['iUserId'] = $row->userId;
+        $_SESSION['sName'] = $row->userName;
+        $_SESSION['sLastName'] = $row->userLastName;
+        $_SESSION['sUserName'] = $row->userUserName;
+        $_SESSION['sProfilePictureUrl'] = $row->userProfilePictureUrl;
         header('location: ../timeline.php');
         exit();
     }

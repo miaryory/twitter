@@ -26,7 +26,6 @@ if( !isset($_SESSION['sName'])){
         <?php require_once(__DIR__.'/components/left.php') ?>
         <?php require_once(__DIR__.'/components/center.php') ?>
         <?php require_once(__DIR__.'/components/right.php') ?>
-        <?php require_once(__DIR__.'/components/chat.php') ?>
 
     </div>
 

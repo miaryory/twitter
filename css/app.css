@@ -1,0 +1,301 @@
+@media all and (min-width: 1000px){
+    #page{
+        width: 100vw;
+    }
+}
+
+@media all and (min-width: 988px){
+    /* ###########################LANDING PAGE################################# */
+
+    #landing{
+        display: grid;
+        grid-template-areas: inherit;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        width: 100%;
+        height: 92vh;
+    }
+
+    #landing #landing-left{
+        grid-area: inherit;
+        width: inherit;
+        height: 100%;
+    }
+
+    .landing-left-wrapper{
+        color: white;
+        max-width: inherit;
+        margin: inherit;
+        padding:30% 20%;
+        height: 100%;
+        position: relative;
+    }
+
+    #landing #landing-left .background-svg{
+        width: 150%;
+    }
+
+    #landing #landing-right{
+        grid-area: inherit;
+        width: inherit;
+        padding:20%;
+        height: 100%;
+    }
+
+    .landing-right-wrapper{
+        max-width: inherit;
+        margin: inherit;
+    }
+
+    /* ###########################SIGN UP################################# */
+
+    .signup-modal{
+        background-color: inherit;
+    }
+
+    .signup-modal .modal-container{
+        width: inherit;
+        height:fit-content;
+    }
+
+    /* ###########################TIMELINE ETC################################# */
+
+    #page{
+        display: grid;
+        grid-template-columns:  9fr 23fr 13fr;
+        /* gap: 1rem; */
+        padding: 0px 7%;
+    }
+
+    #left, #right{
+        display: block;
+    }
+
+    #left{
+        padding-right: 1rem;
+    }
+
+    #left #left-container{
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding: 3%;
+        font-size: 1.2rem;
+    }
+
+    #left #left-container .menu-element{
+        padding: 10px 15px 10px 10px;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.2rem;
+        font-weight: 700;
+        border-radius: 50px;
+        background: transparent;
+        transition: 0.3s;
+        cursor: pointer;
+        width: min-content;
+    }
+    
+
+    #left #left-container .menu-container:hover .menu-element{
+        background: var(--light-blue);
+        color:var(--blue);
+    }
+
+    #left #left-container #modal-tweet-btn{
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    #left #left-container .menu-profile{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        align-items: center;
+        font-size: 0.95rem;
+        position: absolute;
+        bottom: 2rem;
+        padding: 10px 15px 10px 10px;
+        background: white;
+        transition: 0.3s;
+        cursor: pointer;
+        border-radius: 50px;
+        font-weight: 700;
+        gap: 1rem;
+    }
+
+
+    #left #left-container .menu-profile:hover{
+        background: var(--light-blue);
+    }
+
+    #left #left-container .menu-container:hover .menu-element .basic{
+        fill:var(--blue);
+    }
+
+    svg.basic{
+        display: inline-block;
+        width: 1.75rem;
+        fill:  black;
+        margin-right: 5px;
+    }
+
+    #left #left-container .active{
+        color: var(--blue);
+    }
+
+    #left #left-container .active .basic{
+        fill: var(--blue);
+    }
+
+    /* ########################### LOGOUT ################################# */
+    #left #left-container .menu-profile .logout{
+        /* display: none; */
+        width: 300px;
+        position: absolute;
+        transform: translateY(-150px);
+        /* display: flex;
+        flex-direction: column; */
+        background: white;
+        border-radius: 15px;
+        padding: 2%;
+        box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px;
+
+    }
+
+    #left #left-container .menu-profile .logout>*{
+        display: block;
+        padding: 6%;
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+
+    #left #left-container .menu-profile .logout>*:not(:last-child){
+        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    }
+
+    #left #left-container .menu-profile .logout .username-modal{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+    }
+
+    #left #left-container .menu-profile svg{
+        width: 1.25rem;
+    }
+
+    #left .tweet-modal{
+        display: none;
+        position: fixed;
+        left:0;
+        top:0;
+        height: 100%;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    #left .tweet-modal .modal-container{
+        transform: translate(-50%, -50%);
+    }
+
+    #left .tweet-modal .modal-container .new-tweet{
+        border-bottom:none;
+    }
+
+    /********************LEFT BOX STYLE ENDS HERE**************************/
+
+    /********************MIDDLE BOX STYLE ENDS HERE**************************/
+    #right{
+        padding-left: 1rem;
+    }
+
+    #right>*{
+        margin-bottom: 1rem;
+    }
+
+    #right .trends, #right .suggestions{
+        background: rgb(245, 248, 250);
+        border-radius: 15px;
+    }
+
+    .trends>*{
+        padding: 10px;
+    }
+
+    .trends .trends-header h1, .suggestions .suggestions-header h1{
+        font-size: 1.2rem;
+    }
+
+    .trends .trends-header, #explore .search-bar{
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #right .trends .trends-header svg, #explore .search-bar svg{
+        fill: var(--blue);
+        width: 1.4rem;
+    }
+
+    .trends .trend-container{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .trends .trend-container>*{
+        margin-bottom: 2%;
+    }
+
+    .trends .trend-container .trend-localisation{
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+    }
+
+    .trends .trend-container .trend-localisation p, .trends .trend-container .nb-tweets{
+        color: var(--light-grey);
+        font-size: 0.8rem;
+    }
+
+    #right .trends .trend-container .trend-localisation svg{
+        fill: var(--light-grey);
+        width: 70%;
+    }
+
+    .trends .trend-container .trend-keyword{
+        font-size: 0.95rem;
+        font-weight: 700;
+    }
+
+    #right .suggestions .suggestions-header{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 3%;
+    }
+
+    #right .trends .show-more-trend, #right .suggestions .show-more-suggestions{
+        font-size:0.95rem;
+        color:var(--blue);
+        padding: 5%;
+    }
+
+    /* MIDDLE EXPLORE PAGE */
+
+    #explore .search-bar{
+        display: grid;
+        grid-template-columns: 20fr 1fr;
+        align-items: center;
+    }
+
+    #explore .search-bar input{
+        margin: 0.5rem;
+        height: 2rem;
+        width: 95%;
+    }
+
+    #explore .trends .trend-container .trend-localisation svg{
+        fill: var(--light-grey);
+        width: 40%;
+    }
+
+}
